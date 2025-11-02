@@ -1,0 +1,169 @@
+:root{
+  --dark:#1b0f07;
+  --deep:#2e1b12;
+  --nude:#d7b89a;
+  --muted:#a78b74;
+  --white:#f7f4f2;
+  --card-bg: rgba(255,255,255,0.04);
+  --glass: rgba(0,0,0,0.45);
+}
+
+/* base */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:110px}
+body{
+  margin:0;
+  font-family:Inter, "Poppins", system-ui, sans-serif;
+  background:linear-gradient(180deg,var(--dark),var(--deep), #000 );
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* header */
+.site-header{
+  position:fixed;
+  top:0;left:0;right:0;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:0 24px;
+  background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.5));
+  z-index:1200;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+}
+.brand,.brand:focus{outline:none}
+.brand .logo{display:none}
+.brand{font-weight:700;font-size:1.05rem;color:var(--nude)}
+.brand .siteBrand{display:inline-block}
+
+/* nav */
+.nav{display:flex;gap:12px;align-items:center}
+.nav a{
+  color:var(--white);text-decoration:none;padding:10px 12px;border-radius:8px;font-weight:600;
+  transition:all .18s ease;
+}
+.nav a:hover{background:var(--glass); color:var(--nude)}
+.menu-toggle{display:none}
+
+/* hero */
+.hero{min-height:72vh;display:flex;align-items:center;justify-content:center;padding:110px 20px 60px;text-align:center;
+  background:linear-gradient(135deg, rgba(45,26,18,0.5), rgba(25,15,10,0.5));
+}
+.hero-inner{max-width:980px}
+.hero h1{font-size:2.4rem;margin-bottom:10px;color:var(--nude)}
+.lead{color:var(--muted);margin-bottom:18px}
+.hero-cta .btn{margin:0 8px}
+
+/* sections */
+.section{max-width:1100px;margin:48px auto;padding:28px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.25));
+  box-shadow:0 8px 30px rgba(0,0,0,0.45);
+}
+.section h2{color:var(--nude);margin-bottom:8px}
+.muted{color:var(--muted)}
+
+/* grid & cards */
+.grid{display:grid;gap:18px}
+.cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card-bg);padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.card h3{margin:0 0 8px;color:var(--nude)}
+.card p{color:var(--muted);line-height:1.5}
+.feature{padding:10px 12px}
+
+/* buttons */
+.btn{
+  display:inline-block;background:var(--nude);color:#120a06;padding:10px 14px;border-radius:8px;border:none;font-weight:700;
+  text-decoration:none;cursor:pointer;
+}
+.btn.ghost{background:transparent;color:var(--nude);border:1px solid rgba(255,255,255,0.05)}
+.btn.primary{box-shadow:0 6px 18px rgba(215,184,154,0.12)}
+
+/* forms */
+.contact-form,input,textarea,select{
+  font-family:inherit;background:rgba(255,255,255,0.02);color:var(--white);
+}
+.contact-form{display:flex;flex-direction:column;gap:12px;max-width:640px;margin:10px auto 0}
+.contact-form input,.contact-form textarea,.contact-form select{padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
+
+/* apply box small form inside internships */
+.apply-box{margin-top:20px;padding:14px;background:rgba(0,0,0,0.35);border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+
+/* footer */
+.site-footer{padding:22px 12px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+
+/* chat widget */
+.chat-widget{position:fixed;right:20px;bottom:20px;z-index:1400;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.chat-toggle{background:linear-gradient(180deg,var(--nude), #cfa886);border:none;padding:12px;border-radius:50%;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,0.35)}
+.chat-panel{width:320px;background:linear-gradient(180deg,var(--deep),var(--dark));border-radius:12px;overflow:hidden;display:none;flex-direction:column;border:1px solid rgba(255,255,255,0.04)}
+.chat-header{padding:10px 14px;background:linear-gradient(90deg,var(--deep),#3b2517);color:var(--nude);font-weight:700}
+.chat-body{padding:12px;height:260px;overflow:auto;display:flex;flex-direction:column;gap:8px}
+.chat-body .bot{align-self:flex-start;background:var(--nude);color:var(--dark);padding:8px 10px;border-radius:10px;max-width:85%}
+.chat-body .user{align-self:flex-end;background:#0b0b0b;padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);max-width:85%}
+.chat-input{display:flex;gap:8px;padding:10px;border-top:1px solid rgba(255,255,255,0.03)}
+.chat-input input{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--white)}
+.chat-input button{padding:8px 12px;border-radius:8px;border:none;background:var(--nude);color:var(--dark);cursor:pointer}
+
+/* responsiveness */
+@media(max-width:900px){
+  .nav{display:none}
+  .menu-toggle{display:block}
+  .hero h1{font-size:1.6rem}
+  .grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .chat-panel{width:95vw;right:12px;left:12px}
+}
+.college-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #2e1f16;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.college-box {
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  color: #f2d2b2;
+}
+
+.college-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #3b2a21;
+  color: #f2d2b2;
+}
+
+.college-box button {
+  background-color: #b99067;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.college-box button:hover {
+  background-color: #cfa67a;
+}
+
+.college-results {
+  margin-top: 15px;
+  background: #3b2a21;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #fff0da;
+}
+

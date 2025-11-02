@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduConnect — Career & College Hub (Single Page)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">EduConnect</div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#internships">Internships</a>
+      <a href="#training">Placement Training</a>
+      <a href="#scholarships">Scholarships</a>
+      <a href="#exam">Exam Prep</a>
+      <a href="#college">College Info</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME / HERO -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <h1>EduConnect — Learn. Train. Get Hired.</h1>
+        <p class="lead">Internships • Placement Training • Scholarships • Exam Prep • College Info</p>
+        <div class="hero-cta">
+          <a href="#internships" class="btn primary">Browse Internships</a>
+          <a href="#training" class="btn ghost">Training & Prep</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNSHIPS -->
+    <section id="internships" class="section">
+      <h2>Student Internship Portal</h2>
+      <p class="muted">Apply and browse internships — industry projects, remote & on-site options.</p>
+      <div class="grid cards">
+        <article class="card">
+          <h3>Web Development Intern</h3>
+          <p>Build real websites using HTML/CSS/JS. Stipend: ₹8k/month.</p>
+          <a href="https://internshala.com/internships/web-development-internship/" class="btn">Apply</a>
+        </article>
+
+        <article class="card">
+          <h3>AI/ML Intern</h3>
+          <p>Model training & datasets. Mentorship from industry practitioners.</p>
+          <a href="https://internshala.com/internships/artificial-intelligence-ai-internship/" class="btn">Apply</a>
+        </article>
+
+        <article class="card">
+          <h3>Marketing Intern</h3>
+          <p>Campaign design, analytics and social media growth tasks.</p>
+          <a href="https://internshala.com/internships/marketing-internship/" class="btn">Apply</a>
+        </article>
+      </div>
+
+      <!-- quick apply modal trigger -->
+      <div id="apply-intern" class="apply-box">
+        <h4>Apply for Internship</h4>
+        <form id="internForm">
+          <input name="name" placeholder="Your name" required />
+          <input name="email" type="email" placeholder="Email" required />
+          <select name="position" required>
+            <option value="">Choose position</option>
+            <option>Web Development Intern</option>
+            <option>AI/ML Intern</option>
+            <option>Marketing Intern</option>
+          </select>
+          <button type="submit" class="btn primary">Submit Application</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- PLACEMENT TRAINING -->
+    <section id="training" class="section">
+      <h2>Placement Training Institute</h2>
+      <p class="muted">Skill-building: resume, interviews, aptitude, domain training and mock drives.</p>
+      <div class="grid two">
+        <div class="feature">
+          <h3>Mock Interviews & Mentorship</h3>
+          <p>One-on-one mock interviews with feedback.</p>
+        </div>
+        <div class="feature">
+          <h3>Aptitude & Soft Skills</h3>
+          <p>Daily practice, live workshops and recorded modules.</p>
+        </div>
+      </div>
+      <a href="https://www.tibacademy.in/" class="btn ghost">Join Training</a>
+    </section>
+
+    <!-- SCHOLARSHIPS -->
+    <section id="scholarships" class="section">
+      <h2>Scholarship Program</h2>
+      <p class="muted">Merit-based and need-based scholarships — check eligibility and apply.</p>
+      <div class="grid cards">
+        <article class="card">
+          <h3>Merit Scholarship</h3>
+          <p>For top academic performers — coverage for tuition & resources.</p>
+          <a href="https://application.ashoka.edu.in/?utm_source=Google&utm_medium=search&utm_campaign=R1-26-SNB-Zone&utm_campaignid=22893100506&utm_adgroupid=182866463703&utm_creativeid=770286555825&utm_matchtype=b&utm_device=c&utm_network=g&utm_keyword=academic%20scholarships&utm_placement=&gad_source=1&gad_campaignid=22893100506&gbraid=0AAAAACmBNmcJ-56DDsIL0WpssETXTXKDX&gclid=Cj0KCQjwgpzIBhCOARIsABZm7vEToVi6aLJiqb1wyHu8NokQsDfp-KVP-SyzGGWwbcYF4vXKdwbexRIaAqwiEALw_wcB" class="btn">Apply</a>
+        </article>
+        <article class="card">
+          <h3>Need-Based Aid</h3>
+          <p>Support for students with financial constraints.</p>
+          <a href="https://application.ashoka.edu.in/?utm_source=Google&utm_medium=search&utm_campaign=R1-26-SNB-Zone&utm_campaignid=22893100506&utm_adgroupid=182866463703&utm_creativeid=770286555825&utm_matchtype=b&utm_device=c&utm_network=g&utm_keyword=academic%20scholarships&utm_placement=&gad_source=1&gad_campaignid=22893100506&gbraid=0AAAAACmBNmcJ-56DDsIL0WpssETXTXKDX&gclid=Cj0KCQjwgpzIBhCOARIsABZm7vEToVi6aLJiqb1wyHu8NokQsDfp-KVP-SyzGGWwbcYF4vXKdwbexRIaAqwiEALw_wcB" class="btn">Apply</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXAM PREP -->
+    <section id="exam" class="section">
+      <h2>Online Exam Prep (UPSC / KPSC)</h2>
+      <p class="muted">Daily current affairs, test series, notes & mentorship for competitive exams.</p>
+      <div class="grid two">
+        <div class="feature">
+          <h3>Daily Current Affairs</h3>
+          <p>Concise 2–4 line highlights to keep you exam-ready.</p>
+        </div>
+        <div class="feature">
+          <h3>Mock Tests & Live Classes</h3>
+          <p>Regular mock tests with detailed solutions and live doubt-clearing sessions.</p>
+        </div>
+      </div>
+      <a href="https://www.visionias.in/resources/current_affairs/" class="btn primary">Enroll Now</a>
+    </section>
+
+    <!-- COLLEGE INFO -->
+<section id="college-info" style="padding: 40px;">
+  <h2 style="color: #f5deb3;">Engineering College Info</h2>
+  <p>Find the best colleges based on your KCET rank and preferred location.</p>
+
+  <div style="margin-top: 20px;">
+    <input type="number" id="kcetRank" placeholder="Enter your KCET Rank"
+      style="padding: 8px; border-radius: 6px; border: none; margin-right: 10px;">
+    <input type="text" id="location" placeholder="Enter location (e.g., Bangalore)"
+      style="padding: 8px; border-radius: 6px; border: none; margin-right: 10px;">
+    <button id="findCollegeBtn" style="padding: 8px 16px; border-radius: 6px; background-color: #f5deb3; color: #333; border: none; cursor: pointer;">Find College</button>
+  </div>
+
+  <div id="collegeResults" style="margin-top: 25px;"></div>
+</section>
+
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact & Enroll</h2>
+      <p class="muted">Questions? Apply or message us below — we’ll respond quickly (chatbot available too).</p>
+      <form id="contactForm" class="contact-form">
+        <input name="name" placeholder="Your name" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message / Query" rows="4"></textarea>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© 2025 EduConnect • Channabasaveshwara Institute of Technology</small>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chat-widget" id="chatWidget" aria-hidden="false">
+    <button id="chatToggle" class="chat-toggle" aria-label="Open chat">💬</button>
+    <div class="chat-panel" id="chatPanel" aria-hidden="true">
+      <div class="chat-header">EduConnect Bot</div>
+      <div class="chat-body" id="chatBody">
+        <div class="bot">Hi! Ask me about internships, scholarships, placements or exams.</div>
+      </div>
+      <div class="chat-input">
+        <input id="chatInput" placeholder="Type question..." />
+        <button id="chatSend" class="btn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
