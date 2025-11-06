@@ -59,21 +59,21 @@
       </div>
 
       <!-- quick apply modal trigger -->
-      <div id="apply-intern" class="apply-box">
-        <h4>Apply for Internship</h4>
-        <form id="internForm">
-          <input name="name" placeholder="Your name" required />
-          <input name="email" type="email" placeholder="Email" required />
-          <select name="position" required>
-            <option value="">Choose position</option>
-            <option>Web Development Intern</option>
-            <option>AI/ML Intern</option>
-            <option>Marketing Intern</option>
-          </select>
-          <button type="submit" class="btn primary">Submit Application</button>
-        </form>
-      </div>
-    </section>
+      <section class="apply-section">
+  <h2>Apply for Internship</h2>
+  <form class="apply-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email" required>
+    <select required>
+      <option value="">Select Position</option>
+      <option>Web Development Intern</option>
+      <option>AI/ML Intern</option>
+      <option>Marketing Intern</option>
+    </select>
+    <button type="submit">Submit Application</button>
+  </form>
+</section>
+
 
     <!-- PLACEMENT TRAINING -->
     <section id="training" class="section">
@@ -89,7 +89,7 @@
           <p>Daily practice, live workshops and recorded modules.</p>
         </div>
       </div>
-      <a href="https://www.tibacademy.in/" class="btn ghost">Join Training</a>
+      <a href="https://www.tibacademy.in/" class="apply-btn">Join Training</a>
     </section>
 
     <!-- SCHOLARSHIPS -->
@@ -159,7 +159,7 @@
   </main>
 
   <footer class="site-footer">
-    <small>© 2025 EduConnect • Channabasaveshwara Institute of Technology</small>
+    <small>© 2025 EduConnect • Created with ❤️ by SkillCraft Students</small>
   </footer>
 
   <!-- Chatbot -->
@@ -178,5 +178,19 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  reveals.forEach(r => observer.observe(r));
+</script>
+
 </body>
 </html>
